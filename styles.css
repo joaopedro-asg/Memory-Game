@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin: 1.2rem;
+}
+
+header span {
+    color: #007bff;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+main{
+    padding: 1rem;
+    justify-content: center;
+}
+
+/* Jogo */
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(5, 15rem);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    perspective: 1000px;
+
+}
+
+/* Cartas */
+.memory-card {
+    width: 15rem;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+
+
+}
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+
+.memory-card.flip {
+   transform: rotateY(180deg);
+  }
+
+/* Cartas frente e verso */
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.memory-card .front-face {
+    transform: rotateY(180deg);
+}
+
+.memory-card .back-face {
+    background-color: #008CBA;
+    transform: rotateY(0deg);
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.memory-card.flipped .front-face {
+    transform: rotateY(0deg);
+}
+
+.memory-card.flipped .back-face {
+    transform: rotateY(180deg);
+}
+ 
+
+/* Responsividade */
+
+@media screen and (max-width: 1024px) {
+    .memory-game {
+        grid-template-columns: repeat(5, 1fr);
+        width: fit-content;
+    }
+
+    .memory-card {
+        max-width: 120px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .memory-game {
+        grid-template-columns: repeat(4, 1fr);
+        width: fit-content;
+    }
+
+    .memory-card {
+        max-width: 120px;
+        height: 200px;
+    }
+}
+
+/* Ajustes para telas pequenas (máximo 480px) */
+@media screen and (max-width: 480px) {
+    .memory-game {
+        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+        width: fit-content;
+    }
+
+    .memory-card {
+        max-width: 80px;
+        height: 150px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
