@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh;  
     color: #333;
     padding: 1rem;
     flex-direction: column;
@@ -40,6 +40,7 @@ main{
     grid-gap: 10px;
     justify-content: center;
     margin-top: 20px;
+    perspective: 1000px;
 }
 
 /* Cartas */
@@ -48,17 +49,26 @@ main{
     height: 300px;
     perspective: 1000px;
     cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
-/* Cartas frente e verso */
-.memory-card .front-face,
-.memory-card .back-face {
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+   transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     position: absolute;
     backface-visibility: hidden;
-    transition: transform 0.5s;
 }
 
 .memory-card .front-face {
@@ -73,7 +83,6 @@ main{
     border-radius: 10px;
 }
 
-
 .memory-card.flipped .front-face {
     transform: rotateY(0deg);
 }
@@ -82,8 +91,7 @@ main{
     transform: rotateY(180deg);
 }
  
-
-/* Responsividade */
+/* MARK: Responsividade */
 
 @media screen and (max-width: 1024px) {
     .memory-game {
