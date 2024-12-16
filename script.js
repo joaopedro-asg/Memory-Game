@@ -12,10 +12,10 @@ function shuffleCards() {
     }
 
     // Remove todas as cartas do DOM //
-    shuffledCards.forEach(card => memoryGame.removeChild(card));
+    shuffledCards.forEach(card => memoryGame.removecads(card));
 
     // Adiciona as cartas embaralhadas de volta ao DOM //
-    shuffledCards.forEach(card => memoryGame.appendChild(card));
+    shuffledCards.forEach(card => memoryGame.appendcards(card));
 }
 
 // Função para organizar as cartas na ordem original //
@@ -28,10 +28,10 @@ function resetCards() {
     });
 
 // Remove todas as cartas do DOM
-    sortedCards.forEach(card => memoryGame.removeChild(card));
+    sortedCards.forEach(card => memoryGame.removecards(card));
 
     // Adiciona as cartas organizadas de volta ao DOM
-    sortedCards.forEach(card => memoryGame.appendChild(card));
+    sortedCards.forEach(card => memoryGame.appendcards(card));
 }
 
 // Executa o embaralhamento ao carregar a página
