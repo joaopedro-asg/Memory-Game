@@ -19,7 +19,7 @@ function flipCard() {
 }
 
 function checkForMatch() {
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+    if (firstCard.dataset.char === secondCard.dataset.char) {
       disableCards();
       return;
     }
