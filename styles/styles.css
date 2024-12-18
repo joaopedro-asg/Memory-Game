@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquard+24&display=swap');
 
 * {
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 header {
-    font-family: "Silkscreen", sans-serif;
+    font-family: "Jacquard 24", sans-serif;
     font-size: 2em;
     text-align: center;
     margin: 1.2rem;
@@ -22,7 +22,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     color: #333;
     padding: 1rem;
     flex-direction: column;
@@ -76,11 +75,7 @@ main{
 }
 
 .memory-card .back-face {
-    background-color: #008CBA;
     transform: rotateY(0deg);
-    display: block;
-    object-fit: cover;
-    border-radius: 10px;
 }
 
 .memory-card.flipped .front-face {
@@ -107,7 +102,7 @@ main{
 
 @media screen and (max-width: 768px) {
     .memory-game {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         width: fit-content;
     }
 
