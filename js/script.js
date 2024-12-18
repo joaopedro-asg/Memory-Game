@@ -1,9 +1,17 @@
 let hasFlippedCard = false;
+<<<<<<< HEAD
+=======
+let lockBoard = false;
+>>>>>>> joaop
 let firstCard, secondCard;
 
 const cards = document.querySelectorAll('.memory-card');
 
 function flipCard() {
+<<<<<<< HEAD
+=======
+    if (lockBoard) return;
+>>>>>>> joaop
     if (this === firstCard) return;
 
     this.classList.add('flip');
@@ -36,6 +44,11 @@ function disableCards() {
 }
 
 function unflipCards() {
+<<<<<<< HEAD
+=======
+    lockBoard = true;
+    
+>>>>>>> joaop
     setTimeout(() => {
       firstCard.classList.remove('flip');
       secondCard.classList.remove('flip');

@@ -18,7 +18,7 @@ header span {
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #ebebeb;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +40,9 @@ main{
     justify-content: center;
     margin-top: 20px;
     perspective: 1000px;
+    background-color: #333;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 1);
 }
 
 /* Cartas */
@@ -51,6 +54,10 @@ main{
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
 }
 
 .memory-card:active {
