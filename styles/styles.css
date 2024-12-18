@@ -22,8 +22,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #333;
     padding: 1rem;
     flex-direction: column;
 }
