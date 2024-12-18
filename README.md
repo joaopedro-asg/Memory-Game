@@ -1,4 +1,3 @@
-# Memory Game
 
 <p align="center" width="100%">
   <img width="100%" src="https://github.com/user-attachments/assets/98662d46-82b3-4a30-aade-13c0e1238251" alt="memory-game-logo">
