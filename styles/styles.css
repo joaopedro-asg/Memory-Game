@@ -38,6 +38,7 @@ main{
     grid-template-columns: repeat(5, 15rem);
     grid-gap: 10px;
     justify-content: center;
+    border-radius: 10px;
     margin-top: 20px;
     perspective: 1000px;
     background-color: #333;
@@ -48,8 +49,7 @@ main{
 /* Cartas */
 .memory-card {
     width: 15rem;
-    height: 300px;
-    perspective: 1000px;
+    height: 24rem;
     cursor: pointer;
     transform: scale(1);
     transform-style: preserve-3d;
